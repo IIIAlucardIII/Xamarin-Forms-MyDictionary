@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyDictionary.ListOfTags"
+             Title="#tags"
+             BackgroundColor="#33333A">
+<ContentPage.Content>
+        
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <ListView Grid.Row="1" x:Name="ListView" ItemsSource="{Binding Tags}"  RowHeight="53">
+    <ListView.ItemTemplate>
+        <DataTemplate>
+            <ViewCell>
+                <Grid Padding="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="15"></RowDefinition>
+                        <RowDefinition Height="11"></RowDefinition>
+                        <RowDefinition Height="11"></RowDefinition>
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                                <Label FontSize="12" Grid.Row="0" Grid.Column="0" Text="{Binding TagName}" TextColor="#F1F1F1"></Label>
+                                <Label FontSize="12" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding WordCount}" TextColor="#C6C6C7"></Label>
+                                <Label FontSize="9" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding Count}" TextColor="#C6C6C7"></Label>
+                </Grid>
+            </ViewCell>
+        </DataTemplate>
+    </ListView.ItemTemplate>
+    </ListView>
+    </Grid>
+
+    </ContentPage.Content>
+</ContentPage>
