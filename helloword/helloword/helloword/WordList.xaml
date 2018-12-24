@@ -1,22 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:SuaveControls.Views;assembly=SuaveControls.FloatingActionButton"
              x:Class="MyDictionary.WordList"
              BackgroundColor="#33333A"
              Title="Words">
     <ContentPage.Content>
-        
-        
-        
+
+
+
         <Grid>
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+
             </Grid.RowDefinitions>
-            
-            
-            <StackLayout Grid.Row="0" x:Name="stackLayout" Orientation="Horizontal">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+
+            </Grid.ColumnDefinitions>
+
+            <StackLayout Grid.Row="0" Grid.ColumnSpan="2" x:Name="stackLayout" Orientation="Horizontal">
                 <Label HorizontalOptions="Center"
        VerticalOptions="CenterAndExpand">
                     <Label.FormattedText>
@@ -24,19 +31,19 @@
                             <Span Text="#tags"
                   TextColor="#E3BC64"
                   TextDecorations="Underline">
-                            <Span.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" Command="{Binding ClickCommand}"
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" Command="{Binding ClickCommand}"
                                           CommandParameter="https://xamarin.com" />
-                            </Span.GestureRecognizers>
+                                </Span.GestureRecognizers>
                             </Span>
                         </FormattedString>
-                    </Label.FormattedText>  
+                    </Label.FormattedText>
                 </Label>
 
                 <Editor FontSize="13" Placeholder="Text: " PlaceholderColor="#9C9C9C" BackgroundColor="#26262D" HorizontalOptions="FillAndExpand"></Editor>
             </StackLayout>
 
-            <ListView Grid.Row="1" x:Name="ListViewIs" ItemsSource="{Binding Items}"  RowHeight="53">
+            <ListView Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" x:Name="ListViewIs" ItemsSource="{Binding Items}"  RowHeight="53">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -62,7 +69,13 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            
+            <StackLayout Grid.Column="1" Grid.Row="2">
+                
+                <controls:FloatingActionButton x:Name="FAB"  VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand" WidthRequest="50" HeightRequest="62" 
+                                              Image ="plus.png" ButtonColor="#BB903D"/>
+            </StackLayout>
+
         </Grid>
-        
     </ContentPage.Content>
 </ContentPage>
