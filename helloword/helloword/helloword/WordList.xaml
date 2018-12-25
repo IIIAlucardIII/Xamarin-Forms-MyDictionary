@@ -40,10 +40,10 @@
                     </Label.FormattedText>
                 </Label>
 
-                <Editor FontSize="13" Placeholder="Text: " PlaceholderColor="#9C9C9C" BackgroundColor="#26262D" HorizontalOptions="FillAndExpand"></Editor>
+                <Editor FontSize="13" Placeholder="Text: " TextChanged="Editor_TextChanged" PlaceholderColor="#9C9C9C" BackgroundColor="#26262D" HorizontalOptions="FillAndExpand"></Editor>
             </StackLayout>
 
-            <ListView Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" x:Name="ListViewIs" ItemsSource="{Binding Items}"  RowHeight="53">
+            <ListView Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" x:Name="ListViewIs" IsPullToRefreshEnabled="False" ItemsSource="{Binding Items}"  RowHeight="53">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

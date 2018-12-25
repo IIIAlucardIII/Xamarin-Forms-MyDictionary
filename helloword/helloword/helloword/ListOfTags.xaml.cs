@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -15,7 +11,6 @@ namespace MyDictionary
         public ObservableCollection<Tag> Tags { get; set; }
         public Command ClickCommand { get; set; } = new Command(async () =>
         {
-
             await new NavigationPage().PushAsync(new ListOfTags());
         });
 
