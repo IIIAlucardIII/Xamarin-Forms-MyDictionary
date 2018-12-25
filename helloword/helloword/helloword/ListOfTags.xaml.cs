@@ -28,21 +28,63 @@ namespace MyDictionary
 
             Tags.Add(new Tag
             {
-                TagName = "Other",
+                TagName = "other",
                 WordCount = "Word count",
                 Count = 2
             });
 
             Tags.Add(new Tag
             {
-                TagName = "Other",
+                TagName = "building",
                 WordCount = "Word count",
                 Count = 2
             });
 
             Tags.Add(new Tag
             {
-                TagName = "Other",
+                TagName = "fruit",
+                WordCount = "Word count",
+                Count = 2
+            });
+
+            Tags.Add(new Tag
+            {
+                TagName = "action",
+                WordCount = "Word count",
+                Count = 2
+            });
+
+            Tags.Add(new Tag
+            {
+                TagName = "transport",
+                WordCount = "Word count",
+                Count = 2
+            });
+
+            Tags.Add(new Tag
+            {
+                TagName = "animal",
+                WordCount = "Word count",
+                Count = 2
+            });
+
+            Tags.Add(new Tag
+            {
+                TagName = "things",
+                WordCount = "Word count",
+                Count = 2
+            });
+
+            Tags.Add(new Tag
+            {
+                TagName = "furniture",
+                WordCount = "Word count",
+                Count = 2
+            });
+
+            Tags.Add(new Tag
+            {
+                TagName = "new words",
                 WordCount = "Word count",
                 Count = 2
             });

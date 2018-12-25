@@ -71,8 +71,8 @@
             </ListView>
             
             <StackLayout Grid.Column="1" Grid.Row="2">
-                
-                <controls:FloatingActionButton x:Name="FAB"  VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand" WidthRequest="50" HeightRequest="62" 
+
+                <controls:FloatingActionButton x:Name="FAB" Clicked="FloatingActionButton_Clicked" VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand" WidthRequest="50" HeightRequest="62" 
                                               Image ="plus.png" ButtonColor="#BB903D"/>
             </StackLayout>
 

@@ -11,9 +11,8 @@
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>
-    
+
     <MasterDetailPage.Detail>
-        
         <ContentPage>
             <ContentPage.Content>
                 <Label></Label>

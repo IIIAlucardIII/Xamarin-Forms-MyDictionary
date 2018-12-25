@@ -4,7 +4,6 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -16,7 +15,7 @@ namespace MyDictionary
         public ObservableCollection<Item> Items { get; set; }
         public Command ClickCommand { get; set; } = new Command(async () =>
        {
-           
+          
            await new NavigationPage().PushAsync(new ListOfTags());
        });
         
@@ -30,174 +29,169 @@ namespace MyDictionary
 
             Items.Add(new Item
             {
-                Word = "achive",
-                Transcription = "[achive]"
+                Word = "allow",
+                Transcription = "[əˈlaʊ]",
+                Translates = "дозволяти",
+                Tag = "#other"
 
             });
 
             Items.Add(new Item
             {
-                Word = "apple",
-                Transcription = "[epl]",
-                Translates = "Яблуко Ябко",
-                Tag = "#Нові слова"
+                Word = "all",
+                Transcription = "[ɔːl]",
+                Translates = "все, всі",
+                Tag = "#other"
             });
 
             Items.Add(new Item
             {
-                Word = "apple",
-                Transcription = "[epl]",
-                Translates = "Яблуко Ябко",
-                Tag = "#Нові слова"
+                Word = "air",
+                Transcription = "[ɛː]",
+                Translates = "повітря, провітрювати",
+                Tag = "#new words"
             });
 
             Items.Add(new Item
             {
-                Word = "apple",
-                Transcription = "[epl]",
-                Translates = "Яблуко Ябко",
-                Tag = "#Нові слова"
+                Word = "bank",
+                Transcription = "[baŋk]",
+                Translates = "банк",
+                Tag = "#building"
             });
 
             Items.Add(new Item
             {
-                Word = "apple",
-                Transcription = "[epl]",
-                Translates = "Яблуко Ябко",
-                Tag = "#Нові слова"
+                Word = "bar",
+                Transcription = "[bɑː]",
+                Translates = "бар, паб; брусок, стойка",
+                Tag = "#building"
             });
 
             Items.Add(new Item
             {
-                Word = "apple",
-                Transcription = "[epl]",
-                Translates = "Яблуко Ябко",
-                Tag = "#Нові слова"
+                Word = "bear",
+                Transcription = "[bɛː]",
+                Translates = "ведмідь",
+                Tag = "#animal"
             });
 
             Items.Add(new Item
             {
-                Word = "apple",
-                Transcription = "[epl]",
-                Translates = "Яблуко Ябко",
-                Tag = "#Нові слова"
+                Word = "beautiful",
+                Transcription = "[ˈbjuːtɪfʊl]",
+                Translates = "красивий",
+                Tag = "#other"
             });
 
             Items.Add(new Item
             {
-                Word = "apple",
-                Transcription = "[epl]",
-                Translates = "Яблуко Ябко",
-                Tag = "#Нові слова"
+                Word = "bed",
+                Transcription = "[bɛd]",
+                Translates = "ліжко",
+                Tag = "#furniture"
             });
 
             Items.Add(new Item
             {
-                Word = "apple",
-                Transcription = "[epl]",
-                Translates = "Яблуко Ябко",
-                Tag = "#Нові слова"
+                Word = "still",
+                Transcription = "[ˈstɪl]",
+                Translates = "тихий, спокійний",
+                Tag = "#other"
             });
 
             Items.Add(new Item
             {
-                Word = "apple",
-                Transcription = "[epl]",
-                Translates = "Яблуко Ябко",
-                Tag = "#Нові слова"
+                Word = "map	",
+                Transcription = "[ˈmæp]",
+                Translates = "карта",
+                Tag = "#things"
             });
 
             Items.Add(new Item
             {
-                Word = "apple",
-                Transcription = "[epl]",
-                Translates = "Яблуко Ябко",
-                Tag = "#Нові слова"
+                Word = "fat",
+                Transcription = "[ˈfæt]",
+                Translates = "товстий, жирний",
+                Tag = "#other"
             });
 
             Items.Add(new Item
             {
-                Word = "apple",
-                Transcription = "[epl]",
-                Translates = "Яблуко Ябко",
-                Tag = "#Нові слова"
+                Word = "hot",
+                Transcription = "[ˈhɑt]",
+                Translates = "гарячий, жаркий",
+                Tag = "#other"
             });
 
             Items.Add(new Item
             {
-                Word = "apple",
-                Transcription = "[epl]",
-                Translates = "Яблуко Ябко",
-                Tag = "#Нові слова"
+                Word = "run",
+                Transcription = "[ˈrən]",
+                Translates = "бігти",
+                Tag = "#action"
             });
+
+            Items.Add(new Item
+            {
+                Word = "a rat",
+                Transcription = "[ə ˈræt]",
+                Translates = "пацюк, щур",
+                Tag = "#animal"
+            });
+
+            Items.Add(new Item
+            {
+                Word = "tram",
+                Transcription = "[træm]",
+                Translates = "трамвай",
+                Tag = "#transport"
+            });
+
+            Items.Add(new Item
+            {
+                Word = "cup",
+                Transcription = "[kəp]",
+                Translates = "чашка",
+                Tag = "#things"
+            });
+
+            Items.Add(new Item
+            {
+                Word = "bus",
+                Transcription = "[bəs]",
+                Translates = "автобус",
+                Tag = "#transport"
+            });
+
+            Items.Add(new Item
+            {
+                Word = "a plum",
+                Transcription = "[ə ˈpləm]",
+                Translates = "слива",
+                Tag = "#fruit"
+            });
+
+            Items.Add(new Item
+            {
+                Word = "help",
+                Transcription = "[ˈhelp]",
+                Translates = "допомагати",
+                Tag = "#action"
+            });
+
 
 
             this.BindingContext = this;
         }
-
-        public void InsertPageBefore(Page page, Page before)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<Page> PopAsync()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<Page> PopAsync(bool animated)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<Page> PopModalAsync()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<Page> PopModalAsync(bool animated)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task PopToRootAsync()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task PopToRootAsync(bool animated)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task PushAsync(Page page)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task PushAsync(Page page, bool animated)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task PushModalAsync(Page page)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task PushModalAsync(Page page, bool animated)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void RemovePage(Page page)
-        {
-            throw new NotImplementedException();
-        }
-
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new ListOfTags());
         }
+        private async void FloatingActionButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new NewWord());
+        }
+
     }
 }
